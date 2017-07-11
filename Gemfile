@@ -58,3 +58,5 @@ gem 'devise', '~> 4.2'
 gem 'bootstrap', git: 'https://github.com/twbs/bootstrap-rubygem'
 
 gem 'aweb_view_tool', git: 'https://github.com/aweb9099/aweb_view_tool'
+
+gem 'petergate', '~> 1.6', '>= 1.6.3'
