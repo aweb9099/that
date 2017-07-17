@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
+
     <title><%= @page_title %></title>
     <%= csrf_meta_tags %>
 
@@ -14,21 +14,9 @@
   </head>
 
   <body>
-    
-    <!-- start of nav -->
-   <div class="blog-masthead">
-      <div class="container">
-        <nav class="nav blog-nav">
-          <a class="nav-link active" href="#">Home</a>
-          <a class="nav-link" href="#">New features</a>
-          <a class="nav-link" href="#">Press</a>
-          <a class="nav-link" href="#">New hires</a>
-          <a class="nav-link" href="#">About</a>
-        </nav>
-      </div>
-    </div>
-    <!-- end of nav -->
-    
+
+    <%= render 'shared/blog_nav' %>
+
     <!-- start of blog header -->
     <div class="blog-header">
       <div class="container">
@@ -37,16 +25,20 @@
       </div>
     </div>
     <!-- end of blog header -->
-    
+
+    <!-- start of container and row element -->
     <div class="container">
 
       <div class="row">
-    
-        <%= login_helper %>
-    
-        <%= yield %>
+    <!-- start of container and row element -->
+
+
+
         
-        <!-- start of side bar -->
+
+        <%= yield %>
+
+        <!-- start of sidebar -->
         <div class="col-sm-3 offset-sm-1 blog-sidebar">
           <div class="sidebar-module sidebar-module-inset">
             <h4>About</h4>
@@ -78,8 +70,8 @@
             </ol>
           </div>
         </div>
-        <!-- end of side bar -->
-        
+        <!-- end of sidebar -->
+
         <!-- start of footer -->
         <footer class="blog-footer">
           <p>Blog template built for <a href="https://getbootstrap.com">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
@@ -88,11 +80,10 @@
           </p>
         </footer>
         <!-- end of footer -->
-    
+
         <%= render "shared/nav", location: 'bottom' %>
-    
+
         <%= source_helper("blog") %>
-        
       </div>
     </div>
   </body>
