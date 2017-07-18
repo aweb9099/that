@@ -4,15 +4,6 @@ GIT
   specs:
     aweb_view_tool (0.1.0)
 
-GIT
-  remote: https://github.com/twbs/bootstrap-rubygem
-  revision: b156edfee2b9629ad4751ee2a118a04f824ef9eb
-  specs:
-    bootstrap (4.0.0.alpha6)
-      autoprefixer-rails (>= 6.0.3)
-      popper_js (>= 1.9.9, < 2.0)
-      sass (>= 3.4.19)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -54,9 +45,12 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
     arel (7.1.4)
-    autoprefixer-rails (7.1.2.1)
+    autoprefixer-rails (7.1.2.3)
       execjs
     bcrypt (3.1.11)
+    bootstrap (4.0.0.alpha6)
+      autoprefixer-rails (>= 6.0.3)
+      sass (>= 3.4.19)
     builder (3.2.2)
     byebug (9.0.6)
     coderay (1.1.1)
@@ -125,7 +119,6 @@ GEM
     petergate (1.7.5)
       activerecord (> 4.0.0)
     pg (0.19.0)
-    popper_js (1.10.8)
     pry (0.10.4)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -212,7 +205,7 @@ PLATFORMS
 
 DEPENDENCIES
   aweb_view_tool!
-  bootstrap!
+  bootstrap (~> 4.0.0.alpha6)
   byebug
   coffee-rails (~> 4.2)
   devise (~> 4.2)
