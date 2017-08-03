@@ -2,7 +2,7 @@
   <div class="card">
     <h1>This is about me!</h1>
     <div class="row">
-      <div class="col-md-4">
+      <div class="col-md-5">
          <%= image_tag "zapdos.jpg", width: 300, alt: "profile image", class: 'profile-img' %>
          <p><small>Picture from some one on Deviantart</small></p>
          
@@ -11,7 +11,7 @@
               <h5><%= skill.title %></h5>
               <div class="progress">
                 <div 
-                  class="progress-bar progress-bar-striped bg-warning"
+                  class="progress-bar progress-bar-striped bg-info"
                   role-"progressbar"
                   aria-valuenow="<%= skill.percent_utilized %>"
                   aria-valuemax="100"
@@ -24,8 +24,8 @@
         
       </div>
       
-      <div class="col-md-8">
-        <p>I'm 16, 6ft 1in, and male. I like Zapdos.</p>
+      <div class="col-md-7">
+        <p>I'm 16, 6ft 1in, and male. I like Zapdos and Ho-Oh. I'm a massive nerd.</p>
       
         <p>
           <button 
@@ -36,7 +36,7 @@
             aria-expanded="false"
             aria-conrtoler="aList"
           >
-            This is a List
+            Work History
           </button>
           
           <button 
@@ -47,26 +47,26 @@
             aria-expanded="false"
             aria-conrtoler="anotherList"
           >
-            This is another List
+            Education
           </button>
         </p>
         
         <p>
           <div class="collapse" id="aList">
             <div class="card card-block">
-              Item 1
+              Arby's
             </div>
             <div class="card card-block">
-              Item 2
+              Webster's Lawn Care
             </div>
           </div>
           
           <div class="collapse" id="anotherList">
             <div class="card card-block">
-              Another Item 1
+              Jordan High School
             </div>
             <div class="card card-block">
-              Another Item 2
+              No College Yet
           </div>
         </p>
       </div>
