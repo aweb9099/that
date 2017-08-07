@@ -1,20 +1,20 @@
 class PortfoliosController < ApplicationController
-  before_action :set_portfolio_item, only: [:edit, :update, :show, :destroy]
+  before_action :set_portfolio_item, only: [:edit, :show, :update, :destroy]
   layout 'portfolio'
   access all: [:show, :index, :angular], user: {except: [:destroy, :new, :create, :update, :edit, :sort]}, site_admin: :all
   
   def index
     @portfolio_items = Portfolio.by_position
   end
-  
+
   def sort
     params[:order].each do |key, value|
       Portfolio.find(value[:id]).update(position: value[:position])
     end
-    
+
     render nothing: true
   end
-  
+
   def angular
     @angular_portfolio_items = Portfolio.angular
   end
@@ -36,11 +36,9 @@ class PortfoliosController < ApplicationController
   end
 
   def edit
-
   end
 
   def update
-
     respond_to do |format|
       if @portfolio_item.update(portfolio_params)
         format.html { redirect_to portfolios_path, notice: 'The record successfully updated.' }
@@ -54,8 +52,6 @@ class PortfoliosController < ApplicationController
   end
 
   def destroy
-    # Perform the lookup
-
     # Destroy/delete the record
     @portfolio_item.destroy
 
