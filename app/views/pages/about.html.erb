@@ -1,14 +1,75 @@
-<h1>This is about me!</h1>
-<hr>
-<div class="row">
-  <div class="col-md-4">
-     <%= image_tag "zapdos.jpg", width: 300, alt: "profile image" %>
-    <p><small>Picture from some one on Deviantart</small></p>
-  </div>
-  
-  <div class="col-md-8">
-    <p>I'm 16, 6ft 1in, and male. I like Zapdos.</p>
+<div class="app-card-container">
+  <div class="card">
+    <h1>This is about me!</h1>
+    <div class="row">
+      <div class="col-md-5">
+         <%= image_tag "zapdos.jpg", width: 300, alt: "profile image", class: 'profile-img' %>
+         <p><small>Picture from some one on Deviantart</small></p>
+         
+         <div class="skills">
+            <% @skills.each do |skill| %>
+              <h5><%= skill.title %></h5>
+              <div class="progress">
+                <div 
+                  class="progress-bar progress-bar-striped bg-info"
+                  role-"progressbar"
+                  aria-valuenow="<%= skill.percent_utilized %>"
+                  aria-valuemax="100"
+                  style="width: <%= skill.percent_utilized %>%"
+                >
+                </div>
+              </div>
+            <% end %>
+         </div>
+        
+      </div>
+      
+      <div class="col-md-7">
+        <p>I'm 16, 6ft 1in, and male. I like Zapdos and Ho-Oh. I'm a massive nerd.</p>
+      
+        <p>
+          <button 
+            class="btn btn-info"
+            type="button"
+            data-toggle="collapse"
+            data-target="#aList"
+            aria-expanded="false"
+            aria-conrtoler="aList"
+          >
+            Work History
+          </button>
+          
+          <button 
+            class="btn btn-info"
+            type="button"
+            data-toggle="collapse"
+            data-target="#anotherList"
+            aria-expanded="false"
+            aria-conrtoler="anotherList"
+          >
+            Education
+          </button>
+        </p>
+        
+        <p>
+          <div class="collapse" id="aList">
+            <div class="card card-block">
+              Arby's
+            </div>
+            <div class="card card-block">
+              Webster's Lawn Care
+            </div>
+          </div>
+          
+          <div class="collapse" id="anotherList">
+            <div class="card card-block">
+              Jordan High School
+            </div>
+            <div class="card card-block">
+              No College Yet
+          </div>
+        </p>
+      </div>
+    </div>
   </div>
 </div>
-
-<hr>
